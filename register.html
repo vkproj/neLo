@@ -1,0 +1,75 @@
+<html>
+<head><title>Registration Form: jQuery</title>
+ 
+<script type="text/javascript" src="script/jquery-1.9.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#submit').click(function(){ // Create `click` event function for login
+		var username = $('#username'); // Get the username field
+		var password = $('#pass'); // Get the password field
+		var register_result = $('#ack'); // Get the register result div
+		register_result.html('loading..'); // Set the pre-loader can be an animation
+		if(username.val() == ''){ // Check the username values is empty or not
+			username.focus(); // focus to the filed
+			register_result.html('<span class="error">Enter the username</span>');
+			return false;
+		}
+		if(password.val() == ''){ // Check the password values is empty or not
+			password.focus();
+			register_result.html('<span class="error">Enter the password</span>');
+			return false;
+		}
+		if(username.val() != '' && password.val() != ''){ // Check the username and password values is not empty and make the ajax request
+			var UrlToPass = 'action=login&username='+username.val()+'&password='+password.val();
+			$.ajax({ // Send the credential values to another checker.php using Ajax in POST menthod
+			type : 'POST',
+			data : UrlToPass,
+			url  : 'process.php',
+			success: function(responseText){ // Get the result and asign to each cases
+				if(responseText == 'Username and Password are mandatory - from PHP!'){
+					register_result.html('<span class="error">Username and Password are Required!</span>');
+				}else if(responseText == 'Username has already been taken'){
+					register_result.html('<span class="error">Username has already been taken</span>');
+				}
+				else if(responseText == 'Inserted Successfully'){
+					window.location = 'userpage.php';
+				}
+				else{
+					alert('Insertion Failed');
+				}
+			}
+			});
+		}
+		return false;
+	});
+});
+</script>
+
+</head>
+<body>
+ 
+<form id="myForm" action="process.php" method="POST">
+Username: <input type="text" id="username" name="username"/><br />
+Password: <input type="password" id="pass" name="pass"/><br />
+Type:  
+        <input type="radio" name="specie" value="vampir">Vampir<br>
+		<input type="radio" name="specie" value="varcolac" style="margin-left: 50px;">Varcolac<br>
+		<input type="radio" name="specie" value="vrajitoare"
+		style="margin-left: 50px;">Vrajitoare<br>
+		<input type="radio" name="specie" value="zombi"
+		style="margin-left: 50px;">Zombi<br><br>
+
+
+
+
+
+
+
+<button id="submit">register</button>
+</form>
+ 
+<div id="ack"></div>
+
+</body>
+</html>
