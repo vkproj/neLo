@@ -11,7 +11,7 @@ function decrypt($string){
 
 if(isset($_POST['action']) && $_POST['action'] == 'login'){ // Check the action `login`
 	$username 		= htmlentities($_POST['username']); // Get the username
-	$password 		= htmlentities(($_POST['password'])); // Get the password and decrypt it
+	$password 		= htmlentities(md5(($_POST['password']))); // Get the password and decrypt it
 	$query			= mysql_query('SELECT * FROM users WHERE username = "'.$username.'" AND password = "'.$password.'" '); // Check the table with posted credentials
 	$num_rows		= mysql_num_rows($query); // Get the number of rows
 	if($num_rows <= 0){ // If no users exist with posted credentials print 0 like below.
