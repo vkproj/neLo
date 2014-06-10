@@ -20,8 +20,8 @@
 
 		<ul class="menu">
 			<li><a href="index.html">Acasa</a></li>
-			<li><a href="http://localhost/neLo/about.html">Despre noi</a></li>
-			<li class = "cazare_menu"><a href="http://localhost/neLo/camere.html">Camere & Tarife</a>
+			<li><a href="about.html">Despre noi</a></li>
+			<li class = "cazare_menu"><a href="camere.php">Camere & Tarife</a>
 				
 			</li>
 
