@@ -2,7 +2,7 @@
       include_once('library.php');
  
 	  $username = mysql_real_escape_string( $_POST["username"] );
-	  $password = mysql_real_escape_string(($_POST["pass"]) );
+	  $password = mysql_real_escape_string(md5($_POST["password"]));
 	  $type = mysql_real_escape_string( $_POST["specie"] );
 	 
  
