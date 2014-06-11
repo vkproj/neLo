@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-	$to_Email   	= "andreea_1795@yahoo.com"; //Replace with recipient email address
+	$to_Email   	= "crismarucmadalina@yahoo.com"; //Replace with recipient email address
 	$subject        = 'Ah!! My email from Somebody out there...'; //Subject line for emails
 	
 	
@@ -58,7 +58,7 @@ if($_POST)
 	'Reply-To: '.$user_Email.'' . "\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 	
-	$sentMail = @mail($to_Email, $subject, $user_Message .'  -'.$user_Name, $headers);
+	$sentMail = mail($to_Email, $subject, $user_Message);
 	
 	if(!$sentMail)
 	{
