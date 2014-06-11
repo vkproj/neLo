@@ -15,11 +15,11 @@ if(!isset($_SESSION['id']) || $_SESSION['id'] == ''){
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style3.css">
 	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-
 
 <div class="header">
 	<div class="center">
@@ -29,12 +29,12 @@ if(!isset($_SESSION['id']) || $_SESSION['id'] == ''){
 
 		<ul class="menu">
 			<li><a href="index.html">Acasa</a></li>
-			<li><a href="http://localhost/neLo/about.html">Despre noi</a></li>
-			<li class = "cazare_menu"><a href="http://localhost/neLo/camere.html">Camere & Tarife</a>
-				
-			</li>
+			<li><a href="about.html">Despre noi</a></li>
+			<li class = "cazare_menu"><a href="camere.php">Camere & Tarife</a></li>
 
 			<li><a href="contact.php">Contact</a></li>
+			<li><a href="howto.html">Pas cu pas</a></li>
+			<li><a href="logout.php" class="login-button" data-modal = ".login-modal">Logout</a></li>
 			
 		</ul>
 
@@ -50,50 +50,42 @@ if(!isset($_SESSION['id']) || $_SESSION['id'] == ''){
 
 
 
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hi <?php echo ucfirst($_SESSION['username']); ?>, good to see you again</title>
-<style type="text/css">
-body{
-	margin: 0;
-	padding: 0;
-	font-family: arial;
-	color: #2C2C2C;
-	font-size: 14px;
-}
-.a{
-	color:#0033FF;
-}
-h1{
-	margin:0;
-	padding:0;
-	color:#2C2C2C;
-	text-decoration:none;
-}
-.as_wrapper{
-	margin: 0 auto;
-	width: 1000px;
-	padding:20px;
-	border:2px dashed #17A3F7;
-	margin-top:20px;
-}
 
-</style>
 </head>
 
 <body>
-
-<ul id="menu" >
-
-<li><a href="makeRezervation.php">Fa o rezervare</a></li>
-<li><a href="seeRezervation.php">Vezi istoricul rezervarilor</a></li>
-
-
-
-</ul>
-
-
-<div class="as_wrapper">
-	<h1>Hi <b><?php echo ucfirst($_SESSION['username']); ?></b>, good to see you again. This is your secured page. Click here for <a href="logout.php" class="a">logout</a></h1>
-</div>
-</body>
+    
+     <br/>
+    <div class="as_wrapper">
+    	<h1>Buna <b><?php echo ucfirst($_SESSION['username']); ?></b>, bine ai revenit.Ai reusit sa te loghezi . Pentru deconectare clik <a href="logout.php" class="a">logout</a></h1>
+       <img src="img/blood.gif" class="blood">
+	   <img src="img/blood.gif" class="blood">
+	   <img src="img/blood.gif" class="blood">
+		<img src="img/blood.gif" class="blood">
+		<img src="img/blood.gif" class="blood">
+		<img src="img/blood.gif" class="blood">
+	</div>
+	<div id="linkuri">
+	 <ul id="menu" >
+         <p style="color:#CCCCCC;margin-left:450px;font-size:30px;">Sau poti sa :</p><br/>
+        	<div>
+    			<p style="float: left;"><img src="img/arrow.gif" class="arrow" style="margin-left:370px">
+    				
+    			<li><a href="makeRezervation.php" style="color:#CC0000;margin-left:40px;font-size:25px;">Faci o rezervare</a></li>
+    		</div><br/>
+			
+			<div><p style="float: left;"><img src="img/arrow.gif" class="arrow" style="margin-left:0px">
+             <li><a href="seeRezervation.php" style="color:#CC0000;margin-left:40px;font-size:25px;">Vezi istoricul rezervarilor</a></li>
+	       </div><br/>
+		   <div>
+			<p style="float: left;"><img src="img/arrow.gif" class="arrow" style="margin-left:0px">
+		    <li><a href="ocupied.php" style="color:#CC0000;margin-left:40px;font-size:25px;">Verifica o perioada daca e disponibila</a></li>
+			</div>
+	 </ul>
+	</div>
+	
+</body
 </html>
