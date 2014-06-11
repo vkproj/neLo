@@ -1,0 +1,38 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	color: #F4F0F0;
+	font-size: 14px;
+}
+.a{
+	color:#0033FF;
+}
+title{
+color: #F4F0F0;
+font-size: 25px;
+}
+
+h1{
+	margin:0;
+    margin-left:45px;
+	padding:0;
+	color:#F4F0F0;
+	text-decoration:none;
+}
+# linkuri li{
+	margin:0;
+    margin-left:45px;
+	padding:0;
+	color:#F4F0F0;
+	text-decoration:none;
+
+ }
+.as_wrapper{
+	margin: 0 auto;
+	width: 1000px;
+	padding:20px;
+	margin-top:20px;
+    
+font-size: 25px;
+}
