@@ -1,0 +1,97 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', Arial;
+	font-size: 14px;
+	background: url(../img/crypt_11.png) top no-repeat;
+	background-color: rgba(118, 111, 101, 0.7);
+	
+}
+
+
+a {
+	color: #380000;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.header {
+	background: rgba(118, 111, 101, 0.7);
+	-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.logo {
+	margin: 20px 0px 18px 0px;
+	float: left;
+}
+
+.menu {
+	float: right;
+	line-height: 90px;
+}
+
+.menu li {
+	float: left;
+	margin-right: 30px;
+}
+
+.menu li a {
+	text-decoration: none;
+	color: #380000;
+}
+
+.menu li a:hover {
+	color: #ffffff;
+}
+
+.menu li:last-child {
+	margin-right: 0;
+}
+
+.menu li a.login-button {
+	display: block;
+	background: #380000 url(../img/login-icon.png) 12px 6px no-repeat;
+	color: #ffffff;
+	height: 27px;
+	line-height: 27px;
+	padding: 0 14px 0 33px;
+	margin-top: 32px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.menu li a.register-button {
+	display: block;
+	background: #380000 url(../img/login-icon.png) 12px 6px no-repeat;
+	color: #ffffff;
+	height: 27px;
+	line-height: 27px;
+	padding: 0 14px 0 33px;
+	margin-top: 32px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.reg{
+	width: 25%;
+	margin: 0 auto;
+	
+}
+
+
+#myForm {
+	background-color: rgba(118, 111, 101, 0.7);
+	border-radius: 5px;
+	padding: 10px;
+}
